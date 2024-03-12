@@ -1,0 +1,31 @@
+{
+  "name": "backendmongo",
+  "version": "1.0.0",
+  "description": "Backend MongoDB",
+  "main": "api/index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start" : "node ./api/index.js",
+    "dev": "nodemon api/index.js"
+  },
+  "engine": {
+    "node": "18.x",
+    "npm": "9.x"
+  },
+  "keywords": [
+    "mongodb",
+    "nodejs"
+  ],
+  "author": "Thiago Diegoli",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.18.3",
+    "express-validator": "^7.0.1",
+    "mongodb": "^6.5.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  }
+}
