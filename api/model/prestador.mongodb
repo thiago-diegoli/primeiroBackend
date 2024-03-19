@@ -1,5 +1,7 @@
 use('FatecVotorantim')
-const prestador = {
+
+// Prestador 1
+const prestador1 = {
     "cnpj": "45190324000149",
     "razao_social": "SERVIÇOS MOTOBOY LTDA.",
     "cep": "13310160",
@@ -18,7 +20,205 @@ const prestador = {
         "coordinates": [-23.2904, -47.2963]
     }
 }
-db.prestadores.insertOne(prestador)
+db.prestadores.insertOne(prestador1)
+
+// Prestador 2
+const prestador2 = {
+    "cnpj": "12345678000123",
+    "razao_social": "TRANSPORTES RÁPIDOS E EFICIENTES LTDA.",
+    "cep": "13320100",
+    "endereco": {
+        "logradouro": "Rua São Paulo, 123",
+        "complemento": "",
+        "bairro": "Jardim Europa",
+        "localidade": "Votorantim",
+        "uf": "SP"
+    },
+    "cnae_fiscal": 491110,
+    "nome_fantasia": "TRANSPORTE EXPRESSO",
+    "data_inicio_atividade": "2022-08-15",
+    "localizacao": {
+        "type": "Point",
+        "coordinates": [-23.5472, -47.4381]
+    }
+}
+db.prestadores.insertOne(prestador2)
+
+// Prestador 3
+const prestador3 = {
+    "cnpj": "98765432000198",
+    "razao_social": "LOGÍSTICA ÁGIL E SEGURA LTDA.",
+    "cep": "13320500",
+    "endereco": {
+        "logradouro": "Av. dos Bandeirantes, 456",
+        "complemento": "",
+        "bairro": "Vila Nova",
+        "localidade": "Votorantim",
+        "uf": "SP"
+    },
+    "cnae_fiscal": 521110,
+    "nome_fantasia": "LOGÍSTICA RÁPIDA",
+    "data_inicio_atividade": "2022-09-03",
+    "localizacao": {
+        "type": "Point",
+        "coordinates": [-23.5383, -47.4375]
+    }
+}
+db.prestadores.insertOne(prestador3)
+
+// Prestador 4
+const prestador4 = {
+    "cnpj": "13579246800014",
+    "razao_social": "ENTREGAS ÁGEIS LTDA.",
+    "cep": "13320650",
+    "endereco": {
+        "logradouro": "Rua Rio de Janeiro, 789",
+        "complemento": "",
+        "bairro": "Vila Garcia",
+        "localidade": "Votorantim",
+        "uf": "SP"
+    },
+    "cnae_fiscal": 532120,
+    "nome_fantasia": "ENTREGAS RÁPIDAS",
+    "data_inicio_atividade": "2022-09-21",
+    "localizacao": {
+        "type": "Point",
+        "coordinates": [-23.5378, -47.4384]
+    }
+}
+db.prestadores.insertOne(prestador4)
+
+// Prestador 5
+const prestador5 = {
+    "cnpj": "24680135700025",
+    "razao_social": "SERVIÇOS LOGÍSTICOS VOTORANTIM LTDA.",
+    "cep": "13320330",
+    "endereco": {
+        "logradouro": "Av. São João, 987",
+        "complemento": "",
+        "bairro": "Jardim Paraíso",
+        "localidade": "Votorantim",
+        "uf": "SP"
+    },
+    "cnae_fiscal": 522310,
+    "nome_fantasia": "LOGÍSTICA VOTORANTIM",
+    "data_inicio_atividade": "2022-10-07",
+    "localizacao": {
+        "type": "Point",
+        "coordinates": [-23.5412, -47.4337]
+    }
+}
+db.prestadores.insertOne(prestador5)
+
+// Prestador 6
+const prestador6 = {
+    "cnpj": "98765432100132",
+    "razao_social": "SPEEDY DELIVERY LTDA.",
+    "cep": "13320780",
+    "endereco": {
+        "logradouro": "Rua Belo Horizonte, 456",
+        "complemento": "",
+        "bairro": "Vila Nova Votorantim",
+        "localidade": "Votorantim",
+        "uf": "SP"
+    },
+    "cnae_fiscal": 532230,
+    "nome_fantasia": "SPEEDY",
+    "data_inicio_atividade": "2022-11-02",
+    "localizacao": {
+        "type": "Point",
+        "coordinates": [-23.5359, -47.4425]
+    }
+}
+db.prestadores.insertOne(prestador6)
+
+// Prestador 7
+const prestador7 = {
+    "cnpj": "75395185200036",
+    "razao_social": "LOGÍSTICA ÁGIL VOTORANTIM LTDA.",
+    "cep": "13320970",
+    "endereco": {
+        "logradouro": "Av. Brasil, 123",
+        "complemento": "",
+        "bairro": "Centro",
+        "localidade": "Votorantim",
+        "uf": "SP"
+    },
+    "cnae_fiscal": 521190,
+    "nome_fantasia": "LOGÍSTICA ÁGIL",
+    "data_inicio_atividade": "2022-12-18",
+    "localizacao": {
+        "type": "Point",
+        "coordinates": [-23.5375, -47.4364]
+    }
+}
+db.prestadores.insertOne(prestador7)
+
+// Prestador 8
+const prestador8 = {
+    "cnpj": "15948726300047",
+    "razao_social": "ENTREGAS RÁPIDAS VOTORANTIM LTDA.",
+    "cep": "13320470",
+    "endereco": {
+        "logradouro": "Rua Paraná, 789",
+        "complemento": "",
+        "bairro": "Jardim Bela Vista",
+        "localidade": "Votorantim",
+        "uf": "SP"
+    },
+    "cnae_fiscal": 532120,
+    "nome_fantasia": "ENTREGAS VOTORANTIM",
+    "data_inicio_atividade": "2023-01-05",
+    "localizacao": {
+        "type": "Point",
+        "coordinates": [-23.5402, -47.4376]
+    }
+}
+db.prestadores.insertOne(prestador8)
+
+// Prestador 9
+const prestador9 = {
+    "cnpj": "98765432101234",
+    "razao_social": "TRANSPORTES RÁPIDOS VOTORANTIM LTDA.",
+    "cep": "13320890",
+    "endereco": {
+        "logradouro": "Av. Goiás, 456",
+        "complemento": "",
+        "bairro": "Vila Nova Votorantim",
+        "localidade": "Votorantim",
+        "uf": "SP"
+    },
+    "cnae_fiscal": 491110,
+    "nome_fantasia": "TRANSPORTES VOTORANTIM",
+    "data_inicio_atividade": "2023-02-14",
+    "localizacao": {
+        "type": "Point",
+        "coordinates": [-23.5407, -47.4379]
+    }
+}
+db.prestadores.insertOne(prestador9)
+
+// Prestador 10
+const prestador10 = {
+    "cnpj": "85296374100058",
+    "razao_social": "SERVIÇOS EXPRESSOS VOTORANTIM LTDA.",
+    "cep": "13320960",
+    "endereco": {
+        "logradouro": "Rua Santa Catarina, 123",
+        "complemento": "",
+        "bairro": "Vila Nova",
+        "localidade": "Votorantim",
+        "uf": "SP"
+    },
+    "cnae_fiscal": 532120,
+    "nome_fantasia": "SERVIÇOS EXPRESSOS",
+    "data_inicio_atividade": "2023-03-03",
+    "localizacao": {
+        "type": "Point",
+        "coordinates": [-23.5392, -47.4359]
+    }
+}
+db.prestadores.insertOne(prestador10)
 
 use('FatecVotorantim')
 db.prestadores.find()

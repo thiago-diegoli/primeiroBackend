@@ -1,0 +1,36 @@
+@baseURL = http://localhost:4000/api/prestadores
+
+GET {{baseURL}}/?limit=3&skip=0
+Content-Type: application/json
+###
+GET {{baseURL}}/id/65ef95c720ecadeeedfb6309
+Content-Type: application/json
+###
+GET {{baseURL}}/razao/voto
+Content-Type: application/json
+###
+DELETE {{baseURL}}/65ef95c720ecadeeedfb6309
+Content-Type: application/json
+###
+POST {{baseURL}}
+Content-Type: application/json
+
+{
+    "cnpj": "45190324000149",
+    "razao_social": "SERVICOS MOTOBOY LTDA",
+    "cep": "13310160",
+    "endereco": {
+        "logradouro": "Av. President Kennedy, 321",
+        "complemento": "",
+        "bairro": "Centro",
+        "localidade": "Votorantim",
+        "uf": "SP"
+    },
+    "cnae_fiscal": 451510,
+    "nome_fantasia": "ZÉ MOTOBOY",
+    "data_inicio_atividade": "2022-07-22",
+    "localizacao": {
+        "type": "Point",
+        "coordinates": [-23.2904, -47.2963]
+    }
+}
