@@ -34,3 +34,32 @@ Content-Type: application/json
         "coordinates": [-23.2904, -47.2963]
     }
 }
+
+###
+// PUT - Altera um prestador já existente
+PUT {{baseURL}} 
+Content-Type: application/json
+
+{
+    "_id": "65f8c52a605fafa06e96803a",
+    "cnpj": "12345678000123",
+    "razao_social": "TESTETESTETESTETESTETESTETESTETESTETESTETESTETESTE",
+    "cep": "13320100",
+    "endereco": {
+      "logradouro": "Rua São Paulo, 123",
+      "complemento": "",
+      "bairro": "Jardim Europa",
+      "localidade": "Votorantim",
+      "uf": "SP"
+    },
+    "cnae_fiscal": 491110,
+    "nome_fantasia": "TRANSPORTE EXPRESSO",
+    "data_inicio_atividade": "2022-08-15",
+    "localizacao": {
+      "type": "Point",
+      "coordinates": [
+        -23.5472,
+        -47.4381
+      ]
+    }
+  }

@@ -162,4 +162,28 @@ router.post('/', validaPrestador, async(req, res) => {
 
     }
 })
+/**
+ * PUT /api/prestadores
+ * Altera um prestador de serviço pelo _id
+ * Parâmetros: Objeto prestador 
+ */
+router.put('/', validaPrestador, async(req, res) => {
+    let idDocumento = req.body._id
+    delete req.body._id
+    try {
+        /* if (req.method === 'PUT') {
+            req.check('cnpj').skip().if(idDocumento)
+        } */
+        const errors = validationResult(req)
+        if(!errors.isEmpty()){
+            return res.status(400).json({errors: errors.array()})
+        }
+        const prestador = await db.collection(nomeCollection)
+        .updateOne({'_id': {$eq: new ObjectId(idDocumento)}},
+                   {$set: req.body})
+        res.status(202).json(prestador)
+    } catch(err) {
+        res.status(500).json({errors: err.message})
+    }
+})
 export default router
