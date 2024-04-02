@@ -1,0 +1,17 @@
+table {
+    width: 100%;
+    border-collapse: collapse;
+  
+}
+  
+th, td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: left;
+    overflow-wrap: break-word; /* Adiciona quebra de palavra */
+    max-width: 15vw;
+}
+
+.bg-gray {
+    background-color: #444;
+}

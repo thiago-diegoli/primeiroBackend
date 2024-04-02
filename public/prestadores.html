@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fatec Votorantim</title>
+    <link rel="stylesheet" href="css/style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head>
-<body>
+<body onload="carregaPrestadores()">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
@@ -36,12 +37,12 @@
                     Cadastro de Prestadores de Serviço
                 </h4>
                 <div class="container">
-                    <form action="" class="m-auto" style="max-width:600px">
-                        <div class="form-group mb-3"><label for="cnpj0">CNPJ</label><input type="text" class="form-control" id="cnpj0" name="cnpj" pattern="[0-9]{2}\.[0-9]{3}\.[0-9]{3}/[0-9]{4}-[0-9]{2}" autofocus required><small class="form-text text-muted">Informe um CNPJ válido (XX.XXX.XXX/XXXX-XX)</small></div>
+                    <form action="" method="post" id="formPrestador" class="m-auto" style="max-width:600px">
+                        <div class="form-group mb-3"><label for="cnpj0">CNPJ</label><input type="text" class="form-control" id="cnpj0" name="cnpj" autofocus required><small class="form-text text-muted">Informe um CNPJ válido (XX.XXX.XXX/XXXX-XX)</small></div> <!-- pattern="[0-9]{2}\.[0-9]{3}\.[0-9]{3}/[0-9]{4}-[0-9]{2}" -->
                         <div class="form-group mb-3"><label for="razao-social1">Razão social</label><input type="text" class="form-control" id="razao-social1" name="razao-social" required></div>
                         <div class="form-group mb-3"><label for="nome-fantasia2">Nome fantasia</label><input type="text" class="form-control" id="nome-fantasia2" name="nome-fantasia" required></div>
                         <hr class="bg-transparent border-0 py-1" />
-                        <div class="form-group mb-3"><label for="cep4">CEP</label><input type="text" class="form-control" id="cep4" name="cep" pattern="[0-9]{5}-[0-9]{3}" maxlength="8" required><small class="form-text text-muted">Informe um CEP válido (XXXXX-XXX)</small></div>
+                        <div class="form-group mb-3"><label for="cep4">CEP</label><input type="text" class="form-control" id="cep4" name="cep" maxlength="9" required><small class="form-text text-muted">Informe um CEP válido (XXXXX-XXX)</small></div> <!-- pattern="[0-9]{5}-[0-9]{3}" -->
                         <div class="form-group mb-3"><label for="logradouro5">Logradouro</label><input type="text" class="form-control" id="logradouro5" name="logradouro" required></div>
                         <div class="form-group mb-3"><label for="bairro6">Bairro</label><input type="text" class="form-control" id="bairro6" name="bairro" required></div>
                         <div class="form-group mb-3"><label for="localidade7">Localidade</label><input type="text" class="form-control" id="localidade7" name="localidade" required></div>
@@ -79,7 +80,7 @@
                         <div class="form-group mb-3"><label for="latitude10">Latitude</label><input type="numeric" class="form-control" id="latitude10" name="latitude" min="-90" max="90" step="any" required></div>
                         <div class="form-group mb-3"><label for="longitude11">Longitude</label><input type="numeric" class="form-control" id="longitude11" name="longitude" min="-180" max="180" step="any" required></div>
                         <hr class="bg-transparent border-0 py-1" />
-                        <div class="form-group mb-3"><label for="cnae13">CNAE</label><input type="text" class="form-control" id="cnae13" name="cnae"  pattern="[0-9]{4}-[0-9]{1}/[0-9]{2}" required><small class="form-text text-muted"> Informe um CNAE válido (XXXX-X/XX)</small></div>
+                        <div class="form-group mb-3"><label for="cnae13">CNAE</label><input type="text" class="form-control" id="cnae13" name="cnae" required><small class="form-text text-muted"> Informe um CNAE válido (XXXX-X/XX)</small></div> <!-- pattern="[0-9]{4}-[0-9]{1}/[0-9]{2}" -->
                         <div class="form-group mb-3"><label for="data-de-inicio-da-atividade15">Data de Início da Atividade</label><input type="date" class="form-control" id="data-de-inicio-da-atividade15" name="data-de-inicio-da-atividade" required></div>
                         <hr class="bg-transparent border-0 py-1" />
                         <div class="form-group mb-5"><label for="salvar17"></label><button class="btn btn-secondary" type="submit">Salvar 💾</button></div>
@@ -90,9 +91,9 @@
             <div class="col-md-6">
                 <!-- Tabela -->
                 <h4 class="text-dark col-md-6 mt-3">Relação dos Prestadores</h4>
-                <table class="table table-bordered shadow-lg">
+                <table class="table table-bordered shadow-sm">
                     <thead>
-                        <tr class="table-info">
+                        <tr class="text-white bg-gray">
                             <th>Razão social</th>
                             <th>Nome fantasia</th>
                             <th>CNAE</th>
@@ -122,9 +123,10 @@
             </div>
         </div>
      </div>
-      <footer class="bg-dark text-white text-center py-3 position-fixed fixed-bottom">
+      <footer class="bg-dark text-white text-center py-3">
         &copy; Fatec Votorantim - Todos os direitos reservados
       </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="js/prestador.js"></script>
 </body>
 </html>

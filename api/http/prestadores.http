@@ -1,6 +1,6 @@
 @baseURL = http://localhost:4000/api/prestadores
 
-GET {{baseURL}}/?limit=3&skip=0
+GET {{baseURL}}/?limit=20&skip=0
 Content-Type: application/json
 ###
 GET {{baseURL}}/id/65ef95c720ecadeeedfb6309
